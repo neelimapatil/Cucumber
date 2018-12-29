@@ -30,6 +30,7 @@ public class Login extends Config{
 	public static WebDriverWait objWaitDriver = null;
 	public static int intStepCounter=0;
 	public static String strOp = null;
+	public static String heelo=null;
 	
 	final static Logger logger=Logger.getLogger(Login.class);
 	
