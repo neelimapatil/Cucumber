@@ -1,0 +1,119 @@
+#StyoryType=WEB
+#Owner=ejagrutuser
+#CreatuseronDate=29/11/2018 Thursday
+@CreateComapny
+Feature: Create Company
+ Background: user users successfully logged in
+  	When user opens the "FF64" browser
+    And user enters url "http://localhost:90/finsys"
+    When user enters "dummyfm" as username
+    And user enters "passw0rd" as password
+    And user clicks on login button
+    And wait for page load for "30"
+		Then user gets the message starting with "Welcome dummy[FM]" on the top
+    
+    
+@SmokeTest @RegressuseronTest
+ Scenario: Create Company with all valid usernputs
+ 	
+	When user Clicks on Manage Company
+	And user Clicks on new button
+	And user enters Company name as "<Company_name>"
+    And user selects Company type as "IT"
+    And user selects Company Subtype as "Development"
+    And user enters Address as "<Address>"
+    And user enters Phone as "<Phone>"
+    And user enters Email as "<Email>"
+    And user enters Pan Details as "<Pan>"
+    And user enters Tin details as "<Tin>"
+    And user enters mobile details as "<Mobile>"
+    And user enters Website details as "<Website>"
+    And user selects Country as "INDIA"
+    And user selects State as "MAHARASHTRA"
+    And user selects City name as "NASHIK"
+    And user enters Total Employees as "<Total_Employees>"
+    And user clicks on Save button
+    Then user should see saved company name "SNDT tech" in the first row of table
+    And Close the Browser1
+    | Company_name | Company_type | Company_Subtype | Address | Phone | Email | Pan | Tin | Mobile | Website | Country | State | City | Total_Employees |
+    | [random] | IT | Development | [random] | [random] | [random] | [random] | [random] | [random] | [random] | INDIA | MAHARASHTRA | PUNE | [random] |
+    | [random] | IT | Support | [random]  | [random]  | [random] | [random]  | [random]  | [random]  | [random] | INDIA | MAHARASHTRA | PUNE | [random]  |
+	
+@EndToEndTest
+ Scenario: Create Company with blank inputs
+    
+		When user Clicks on Manage Company
+		And user Clicks on new button
+		And user enters Company name as " "
+    And user selects Company type as " "
+    And user selects Company Subtype as " "
+    And user enters Address as " "
+    And user enters Phone as " "
+    And user enters Email as " "
+    And user enters Pan Details as " "
+    And user enters Tin details as " "
+    And user enters mobile details as " "
+    And user enters Website details as " "
+    And user selects Country as " "
+    And user selects State as " "
+    And user selects City name as " "
+    And user enters Total Employees as " "
+    And user clicks on Save button
+    Then user should see saved company name "Tech-Mahindraa" in the first row of table
+    And Close the Browser1
+
+    
+ 
+ @EndToEndTest
+ Scenario: Create Company with partial valid & partial invalid inputs
+
+	When user Clicks on Manage Company
+	And user Clicks on new button
+	And user enters Company name as "Synies"
+    And user selects Company type as "IT"
+    And user selects Company Subtype as "Development"
+    And user enters Address as "Kolhapur"
+    And user enters Phone as "45742452"
+    And user enters Email as "remiahoo.com"
+    And user enters Pan Details as "ABCDE123"
+    And user enters Tin details as "abgrjas5"
+    And user enters mobile details as "8669002259"
+    And user enters Website details as "www.ejagruti.com"
+    And user selects Country as "INDIA"
+    And user selects State as "MAHARASHTRA"
+    And user selects City name as "KOLHAPUR"
+    And user enters Total Employees as "750"
+    And user clicks on Save button
+    Then user should see saved company name "Tech-Mahindraa'" in the first row of table
+    And Close the Browser1
+    
+    
+	
+    
+ 
+ 
+ @EndToEndTest
+ Scenario: Create company using duplicate company name and valid details 
+ 
+	When user Clicks on Manage Company
+	And user Clicks on new button
+	And user enters Company name as "Tech-M"
+    And user selects Company type as "IT"
+    And user selects Company Subtype as "Development"
+    And user enters Address as "Kolhapur"
+    And user enters Phone as "457424521"
+    And user enters Email as "remi@yahoo.com"
+    And user enters Pan Details as "ABCDE1234F"
+    And user enters Tin details as "abgrjase45"
+    And user enters mobile details as "8669002259"
+    And user enters Website details as "www.ejagruti.com"
+    And user selects Country as "INDIA"
+    And user selects State as "MAHARASHTRA"
+    And user selects City name as "KOLHAPUR"
+    And user enters Total Employees as "750"
+    And user clicks on Save button
+    Then user should see saved company name "Tech-Mahindraa" in the first row of table
+    And Close the Browser1
+    
+ 
+ 

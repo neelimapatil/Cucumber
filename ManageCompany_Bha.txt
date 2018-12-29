@@ -1,0 +1,305 @@
+package ej.modules;
+
+import java.io.IOException;
+import java.security.SecureRandom;
+import java.util.Random;
+import java.util.UUID;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+
+import cucumber.api.java.en.And;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+import ej.configurations.Config;
+
+public class ManageCompany extends Config{
+	@When ("^user Clicks on Financial Analysis link$")
+		public void ClickonFinAnaLink(String strLink)
+		{
+			WebElement objLink=ExplicitWait.WaitForObjectExist(strLink);
+			String strVar = objLink.getAttribute("class");
+			System.out.println(strVar);
+			if (strVar.contains("selected"))
+			{
+			;
+			}	
+			else
+			{
+				objLink=ExplicitWait.WaitForObjectExist("//div[contains(text(),'Financial Analysis')]/following-sibling::div");
+				objLink.click();
+			}
+		}
+		@And ("^user Clicks on Company Link$")
+		public void ClickonCompanyLink(String strLink)
+		{
+			WebElement objLink=ExplicitWait.WaitForObjectExist(strLink);
+			String strVar = objLink.getAttribute("class");
+			System.out.println(strVar);
+			if (strVar.contains("expanded"))
+			{
+			;
+			}	
+			else
+			{
+				objLink=ExplicitWait.WaitForObjectExist("//*[@id='_easyui_tree_1']//child::span[1]");
+				objLink.click();
+			}
+			
+		}
+		@And ("^user Clicks on Manage Company$")
+		public void ClickonManageCompanyLink() throws IOException
+		{
+			init();
+			WebElement objLink=ExplicitWait.WaitForObjectExist(OBJ_MANAGE_COMPANY_LINK);
+			objLink.click();
+		}
+		@When ("^user Clicks on new button$")
+		public void ClickonNewButton() throws InterruptedException, IOException
+		{
+			Thread.sleep(4000);
+			init();			
+		    Login.driver.switchTo().frame(0);
+		    WebElement objLink=ExplicitWait.WaitForObjectExist(OBJ_NEW_BUTTON);
+			objLink.click();
+		}
+		@And ("^user enters Company name as \"(.*)\"$")
+		public void EnterComName(String strComName) throws IOException
+		{
+			init();
+			UUID uuid = UUID.randomUUID();
+			String uniqueID = uuid.toString();
+			WebElement objLink=ExplicitWait.WaitForObjectExist(OBJ_COMPANY_NAME);
+			objLink.sendKeys(uniqueID);
+			
+		}
+		
+		@And ("^user selects Company type as \"(.*)\"$")
+		public void SelectComType(String strComType) throws IOException, Exception
+		{
+			Thread.sleep(2000);
+			init();
+			WebElement objDropDown=ExplicitWait.WaitForObjectExist(OBJ_COMPANY_TYPE);
+			Select objDashBoard = new Select(objDropDown);
+			objDashBoard.selectByVisibleText(strComType);
+		}
+		@And ("^user selects Company Subtype as \"(.*)\"$")
+		public void SelectCComSubType(String strComSubType) throws IOException, Exception
+		{
+			Thread.sleep(1000);
+			init();
+			WebElement objDropDown=ExplicitWait.WaitForObjectExist(OBJ_COMPANY_SUBTYPE);
+			Select objDashBoard = new Select(objDropDown);
+			objDashBoard.selectByVisibleText(strComSubType);	
+		}	
+		@And ("^user enters Address as \"(.*)\"$")
+		public void EnterAddress(String strAddress) throws IOException, Exception
+		{
+			Thread.sleep(1000);
+			init();
+			UUID uuid = UUID.randomUUID();
+			String uniqueID = uuid.toString();
+			WebElement objLink=ExplicitWait.WaitForObjectExist(OBJ_COMPANY_ADDRESS);
+			objLink.sendKeys(uniqueID);
+		}
+		@And ("^user enters Phone as \"(.*)\"$")
+		public void EnterPhone(String strPhone) throws IOException, Exception
+		{
+			Thread.sleep(1000);
+			init();
+			String random = String.valueOf(10 < 1 ? 0 : new Random()
+            .nextInt((9 * (int) Math.pow(10, 10 - 1)) - 1)
+            + (int) Math.pow(10, 10 - 1));
+			WebElement objLink=ExplicitWait.WaitForObjectExist(OBJ_COMPANY_PHONE);
+			objLink.sendKeys(random);
+		}
+		@And ("^user enters Email as \"(.*)\"$")
+		public void EnterEmail(String strEmail) throws IOException, Exception
+		{
+			Thread.sleep(1000);
+			init();
+			String random = String.valueOf(3 < 1 ? 0 : new Random()
+            .nextInt((9 * (int) Math.pow(10, 3 - 1)) - 1)
+            + (int) Math.pow(10, 3 - 1));
+			String email = "username" + random + "@mail.com";
+			WebElement objLink=ExplicitWait.WaitForObjectExist(OBJ_COMPANY_EMAIL);
+			objLink.sendKeys(email);	
+		}
+		@And("^user enters Pan Details as \"(.*)\"$")
+		public void EnterPan(String strPan) throws IOException, Exception
+		{
+			Thread.sleep(1000);
+			init();
+			String ad = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+			SecureRandom rnd = new SecureRandom();
+
+			WebElement objLink=ExplicitWait.WaitForObjectExist(OBJ_COMPANY_PAN);
+			objLink.sendKeys(strPan);		
+		}
+		@And ("^user enters Tin details as \"(.*)\"$")
+		public void EnterTin(String strTin) throws IOException, Exception
+		{
+			Thread.sleep(1000);
+			init();
+			WebElement objLink=ExplicitWait.WaitForObjectExist(OBJ_COPANY_TIN);
+			objLink.sendKeys(strTin);	
+		}
+		@And ("^user enters mobile details as \"(.*)\"$")
+		public void EnterMobile(String strMobile) throws IOException, Exception
+		{
+			Thread.sleep(1000);
+			init();
+			String random = String.valueOf(10 < 1 ? 0 : new Random()
+            .nextInt((9 * (int) Math.pow(10, 10 - 1)) - 1)
+            + (int) Math.pow(10, 10 - 1));
+			WebElement objLink=ExplicitWait.WaitForObjectExist(OBJ_COMPANY_MOBILE);
+			objLink.sendKeys(random);	
+		}
+		@And ("^user enters Website details as \"(.*)\"$")
+		public void EnterWebsite(String strWebsite)throws IOException, Exception
+		{
+			Thread.sleep(2000);
+			init();
+			WebElement objLink=ExplicitWait.WaitForObjectExist(OBJ_COMPANY_WEBSITE);
+			objLink.sendKeys(strWebsite);	
+		}
+		@And ("^user selects Country as \"(.*)\"$")
+		public void SelectCountry(String strCountry)throws IOException, Exception
+		{
+			Thread.sleep(2000);
+			init();
+			WebElement objDropDown=ExplicitWait.WaitForObjectExist(OBJ_COUNTRY);
+			Select objDashBoard = new Select(objDropDown);
+			objDashBoard.selectByVisibleText(strCountry);
+		}
+		@And ("^user selects State as \"(.*)\"$")
+		public void SelectState(String strState) throws IOException, Exception
+		{
+			Thread.sleep(2000);
+			init();
+			WebElement objDropDown=ExplicitWait.WaitForObjectExist(OBJ_STATE);
+			Select objDashBoard = new Select(objDropDown);
+			objDashBoard.selectByVisibleText(strState);
+		}
+		@And ("^user selects City name as \"(.*)\"$")
+		public void SelectCity(String strCity) throws IOException, Exception
+		{
+			Thread.sleep(2000);
+			init();
+			WebElement objDropDown=ExplicitWait.WaitForObjectExist(OBJ_CITY);
+			Select objDashBoard = new Select(objDropDown);
+			objDashBoard.selectByVisibleText(strCity);
+		}
+		@And ("^user enters Total Employees as \"(.*)\"$")
+		public void EnterTotalEmp(String strTotalEmp) throws IOException, Exception
+		{
+			Thread.sleep(2000);
+			init();
+			WebElement objLink=ExplicitWait.WaitForObjectExist(OBJ_TOTAL_EMPLOYEE);
+			objLink.sendKeys(strTotalEmp);	
+		}
+		@And ("^user clicks on Save button$")
+		public void ClickOnSaveButton() throws IOException, Exception
+		{
+			Thread.sleep(2000);
+			init();
+			WebElement objButton=ExplicitWait.WaitForObjectExist(OBJ_SAVE_BUTTON);
+			objButton.click();
+			Thread.sleep(2000);
+		}
+		@Then("^user should see saved company name \"(.*)\" in the first row of table$") 
+		public boolean CheckForCompanyNameExist(String strval){
+			 Boolean op = false;
+			 WebElement obj = ExplicitWait.WaitForObjectExist("//div[contains(text(),'Tech-Mahindraa')]");
+			 String str = obj.getText();
+			 if(str.equals(strval)){
+				 op  = true;				 
+			 }
+			 System.out.println(op);
+			 return op;
+			 
+			 
+		 }
+		@And("^Close the Browser1$")
+		public void CloseBrowser(){
+			driver.close();
+		}
+
+	/*public static void main(String[] args) throws IOException, Exception {
+		// TODO Auto-generated method stub
+		Login objLogin = new Login();
+		String strReadValue=objLogin.GetParameterValue_again("BROWSER_NAME", "parameter.properties");
+		objLogin.OpenBrowser(strReadValue);
+		strReadValue=objLogin.GetParameterValue_again("APPLICATION_URL", "parameter.properties");
+		objLogin.EnterURL(strReadValue);
+	    strReadValue=objLogin.GetParameterValue_again("USERNAME", "parameter.properties");
+	    String strReadVal = objLogin.GetParameterValue_again("OBJ_USERNAME", "OR.properties");
+		objLogin.EnterUserName(strReadVal, strReadValue);
+	    strReadValue=objLogin.GetParameterValue_again("PASSWORD", "parameter.properties");
+	    strReadVal = objLogin.GetParameterValue_again("OBJ_PASSWORD", "OR.properties");
+		objLogin.EnterPassword(strReadVal, strReadValue);
+		strReadValue=objLogin.GetParameterValue_again("OBJ_LOGIN_BUTTON", "OR.properties");
+		objLogin.ClickLoginButton(strReadValue);
+
+		ManageCompany objCom = new ManageCompany();
+		Thread.sleep(2000);		
+		//strReadValue=objLogin.GetParameterValue_again("OBJ_FINANCIAL_ANALYSIS_LINK", "OR.properties");
+		//objCom.ClickonFinAnaLink(strReadValue);
+		
+		strReadValue=objLogin.GetParameterValue_again("OBJ_COMPANY_LINK", "OR.properties");
+		objCom.ClickonCompanyLink(strReadValue);
+		
+		strReadValue=objLogin.GetParameterValue_again("OBJ_MANAGE_COMPANY_LINK", "OR.properties");
+		objCom.ClickonManageCompanyLink(strReadValue);
+		
+		strReadValue=objLogin.GetParameterValue_again("OBJ_NEW_BUTTON", "OR.properties");
+		objCom.ClickonNewButton(strReadValue);
+		
+		strReadValue=objLogin.GetParameterValue_again("COMPANY_NAME", "parameter.properties");
+		objCom.EnterComName(strReadValue);
+		
+		strReadValue=objLogin.GetParameterValue_again("COMPANY_TYPE", "parameter.properties");
+		objCom.SelectComType(strReadValue);
+		
+		strReadValue=objLogin.GetParameterValue_again("COMPANY_SUBTYPE", "parameter.properties");
+		objCom.SelectCComSubType(strReadValue);
+		
+		strReadValue=objLogin.GetParameterValue_again("COMPANY_ADDRESS", "parameter.properties");
+		objCom.EnterAddress(strReadValue);
+		
+		strReadValue=objLogin.GetParameterValue_again("COMPANY_PHONE", "parameter.properties");
+		objCom.EnterPhone(strReadValue);
+		
+		strReadValue=objLogin.GetParameterValue_again("COMPANY_EMAIL", "parameter.properties");
+		objCom.EnterEmail(strReadValue);
+		
+		strReadValue=objLogin.GetParameterValue_again("COMPANY_PAN", "parameter.properties");
+		objCom.EnterPan(strReadValue);
+		
+		strReadValue=objLogin.GetParameterValue_again("COMPANY_TIN", "parameter.properties");
+		objCom.EnterTin(strReadValue);
+		
+		strReadValue=objLogin.GetParameterValue_again("COMPANY_MOBILE", "parameter.properties");
+		objCom.EnterMobile(strReadValue);
+		
+		strReadValue=objLogin.GetParameterValue_again("COMPANY_WEBSITE", "parameter.properties");
+		objCom.EnterWebsite(strReadValue);
+		
+		strReadValue=objLogin.GetParameterValue_again("COUNTRY", "parameter.properties");
+		objCom.SelectCountry(strReadValue);
+		
+		strReadValue=objLogin.GetParameterValue_again("STATE", "parameter.properties");
+		objCom.SelectState(strReadValue);
+		
+		strReadValue=objLogin.GetParameterValue_again("CITY", "parameter.properties");
+		objCom.SelectCity(strReadValue);
+		
+		strReadValue=objLogin.GetParameterValue_again("TOTAL_EMPLOYEE", "parameter.properties");
+		objCom.EnterTotalEmp(strReadValue);
+		
+		strReadValue=objLogin.GetParameterValue_again("OBJ_SAVE_BUTTON", "OR.properties");
+		objCom.ClickOnSaveButton(strReadValue);
+
+	}
+*/
+}

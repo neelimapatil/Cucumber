@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="62" failures="0" name="EJ.MODULES.runTest" time="2.445" errors="0" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="cucumber.options" value="src/test/resources/Features"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_40\jre\bin"/>
+    <property name="java.vm.version" value="25.40-b25"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="E:\selenium\Workspace\workspace_maven\EJCUCUMBER"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="IN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="E:\selenium\Workspace\workspace_maven\EJCUCUMBER"/>
+    <property name="java.runtime.version" value="1.8.0_40-b26"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_40\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\Dell\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 8.1"/>
+    <property name="classworlds.conf" value="C:\ejagruti-Automation\maven\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_40\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\ejagruti-Automation\maven\bin;;C:\WINDOWS\System32\OpenSSH\;C:\Users\Dell\AppData\Local\Microsoft\WindowsApps;C:\AppServ\Apache2.2\bin;C:\AppServ\php5;C:\AppServ\MySQL\bin;;."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="6.3"/>
+    <property name="user.home" value="C:\Users\Dell"/>
+    <property name="user.timezone" value="Asia/Calcutta"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="user.name" value="Dell"/>
+    <property name="java.class.path" value="C:\ejagruti-Automation\maven\boot\plexus-classworlds-2.5.2.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_40\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean test -Dcucumber.options=src/test/resources/Features"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_40"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_40\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_40\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_40\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_40\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_40\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_40\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_40\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_40\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_40\jre\classes"/>
+    <property name="sun.stderr.encoding" value="cp437"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="C:\ejagruti-Automation\maven"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.stdout.encoding" value="cp437"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="Scenario: Create New Company Successfully" name="When user opens the &quot;FF32&quot; browser" time="0.004"/>
+  <testcase classname="Scenario: Create New Company Successfully" name="And user enters the url &quot;http://localhost:90/finsys&quot;" time="0"/>
+  <testcase classname="Scenario: Create New Company Successfully" name="When user enters &quot;dummyfm&quot; as username" time="0"/>
+  <testcase classname="Scenario: Create New Company Successfully" name="And user enters &quot;passw0rd&quot; as password" time="0"/>
+  <testcase classname="Scenario: Create New Company Successfully" name="And user clicks on Login button" time="0"/>
+  <testcase classname="Scenario: Create New Company Successfully" name="When user clicks on Financial Analysis link" time="0"/>
+  <testcase classname="Scenario: Create New Company Successfully" name="And user clicks on Company link" time="0"/>
+  <testcase classname="Scenario: Create New Company Successfully" name="And user clicks on Manage Company link" time="0"/>
+  <testcase classname="Scenario: Create New Company Successfully" name="When user clicks on New button" time="0"/>
+  <testcase classname="Scenario: Create New Company Successfully" name="And User enters Company name as &quot;Tester12&quot;" time="0.001"/>
+  <testcase classname="Scenario: Create New Company Successfully" name="And User selects Company type as &quot;IT&quot;" time="0"/>
+  <testcase classname="Scenario: Create New Company Successfully" name="And User Company Subtype as &quot;Support&quot;" time="0"/>
+  <testcase classname="Scenario: Create New Company Successfully" name="And User enters Address as &quot;Pune&quot;" time="0"/>
+  <testcase classname="Scenario: Create New Company Successfully" name="And User enters Phone as &quot;0123456789&quot;" time="0"/>
+  <testcase classname="Scenario: Create New Company Successfully" name="And User enters Email as &quot;abcdef@gmail.com&quot;" time="0"/>
+  <testcase classname="Scenario: Create New Company Successfully" name="And User enters Pan Details as &quot;ARPPT3211265498&quot;" time="0"/>
+  <testcase classname="Scenario: Create New Company Successfully" name="And User enters Tin details as &quot;32165432165487&quot;" time="0"/>
+  <testcase classname="Scenario: Create New Company Successfully" name="And User enters Country as &quot;INDIA&quot;" time="0"/>
+  <testcase classname="Scenario: Create New Company Successfully" name="And User enters State as &quot;MAHARASHTRA&quot;" time="0"/>
+  <testcase classname="Scenario: Create New Company Successfully" name="And User enters City name as &quot;PUNE&quot;" time="0"/>
+  <testcase classname="Scenario: Create New Company Successfully" name="And User enters Total Employee as &quot;1&quot;" time="0"/>
+  <testcase classname="Scenario: Create New Company Successfully" name="And User clicks on Save button" time="0"/>
+  <testcase classname="Scenario: Create New Company Successfully" name="Scenario: Create New Company Successfully" time="1.853"/>
+  <testcase classname="| dummyfm | passw0rd |" name="When user opens the &quot;FF32&quot; browser" time="0"/>
+  <testcase classname="| dummyfm | passw0rd |" name="And user enters the url &quot;http://localhost:90/finsys&quot;" time="0"/>
+  <testcase classname="| dummyfm | passw0rd |" name="When user enters &quot;dummyfm&quot; as username" time="0"/>
+  <testcase classname="| dummyfm | passw0rd |" name="And user enters &quot;passw0rd&quot; as password" time="0"/>
+  <testcase classname="| dummyfm | passw0rd |" name="And user clicks on Login button" time="0"/>
+  <testcase classname="| dummyfm | passw0rd |" name="Then user verifies the link on home page" time="0"/>
+  <testcase classname="| dummyfm | passw0rd |" name="And Close the Broswer" time="0.001"/>
+  <testcase classname="| dummyfm | passw0rd |" name="| dummyfm | passw0rd |" time="0.113"/>
+  <testcase classname="| dummy | passw0rd |" name="When user opens the &quot;FF32&quot; browser" time="0"/>
+  <testcase classname="| dummy | passw0rd |" name="And user enters the url &quot;http://localhost:90/finsys&quot;" time="0"/>
+  <testcase classname="| dummy | passw0rd |" name="When user enters &quot;dummy&quot; as username" time="0"/>
+  <testcase classname="| dummy | passw0rd |" name="And user enters &quot;passw0rd&quot; as password" time="0"/>
+  <testcase classname="| dummy | passw0rd |" name="And user clicks on Login button" time="0"/>
+  <testcase classname="| dummy | passw0rd |" name="Then user verifies the link on home page" time="0"/>
+  <testcase classname="| dummy | passw0rd |" name="And Close the Broswer" time="0"/>
+  <testcase classname="| dummy | passw0rd |" name="| dummy | passw0rd |" time="0.14"/>
+  <testcase classname="|  |  |" name="When user opens the &quot;FF32&quot; browser" time="0"/>
+  <testcase classname="|  |  |" name="And user enters the url &quot;http://localhost:90/finsys&quot;" time="0"/>
+  <testcase classname="|  |  |" name="When user enters &quot;&quot; as username" time="0"/>
+  <testcase classname="|  |  |" name="And user enters &quot;&quot; as password" time="0"/>
+  <testcase classname="|  |  |" name="And user clicks on Login button" time="0"/>
+  <testcase classname="|  |  |" name="Then user verifies the link on home page" time="0"/>
+  <testcase classname="|  |  |" name="And Close the Broswer" time="0"/>
+  <testcase classname="|  |  |" name="|  |  |" time="0.135"/>
+  <testcase classname="| dummyfm | passw0 |" name="When user opens the &quot;FF32&quot; browser" time="0"/>
+  <testcase classname="| dummyfm | passw0 |" name="And user enters the url &quot;http://localhost:90/finsys&quot;" time="0"/>
+  <testcase classname="| dummyfm | passw0 |" name="When user enters &quot;dummyfm&quot; as username" time="0"/>
+  <testcase classname="| dummyfm | passw0 |" name="And user enters &quot;passw0&quot; as password" time="0"/>
+  <testcase classname="| dummyfm | passw0 |" name="And user clicks on Login button" time="0"/>
+  <testcase classname="| dummyfm | passw0 |" name="Then user verifies the link on home page" time="0"/>
+  <testcase classname="| dummyfm | passw0 |" name="And Close the Broswer" time="0"/>
+  <testcase classname="| dummyfm | passw0 |" name="| dummyfm | passw0 |" time="0.114"/>
+  <testcase classname="Scenario: Login Functionality when valid username and valid password are entered through datatable" name="When user opens the &quot;FF32&quot; browser" time="0"/>
+  <testcase classname="Scenario: Login Functionality when valid username and valid password are entered through datatable" name="And user enters the url &quot;http://localhost:90/finsys&quot;" time="0"/>
+  <testcase classname="Scenario: Login Functionality when valid username and valid password are entered through datatable" name="When user enters username and password that has column names" time="0"/>
+  <testcase classname="Scenario: Login Functionality when valid username and valid password are entered through datatable" name="And user clicks on Login button" time="0"/>
+  <testcase classname="Scenario: Login Functionality when valid username and valid password are entered through datatable" name="Then user verifies the link on home page" time="0"/>
+  <testcase classname="Scenario: Login Functionality when valid username and valid password are entered through datatable" name="And Close the Broswer" time="0"/>
+  <testcase classname="Scenario: Login Functionality when valid username and valid password are entered through datatable" name="Scenario: Login Functionality when valid username and valid password are entered through datatable" time="0.084"/>
+</testsuite>

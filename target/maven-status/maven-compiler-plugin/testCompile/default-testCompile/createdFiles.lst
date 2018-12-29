@@ -1,0 +1,9 @@
+EJ\MODULES\FakeDataGenerator.class
+EJ\MODULES\runTest.class
+EJ\MODULES\Login.class
+EJ\MODULES\Config.class
+EJ\MODULES\ManageCompany.class
+EJ\generic\HTMLReportGenerator.class
+EJ\MODULES\ExplicitWait.class
+EJ\MODULES\Screenshot.class
+EJ\generic\File_Operations.class
