@@ -32,6 +32,7 @@ public class Login extends Config{
 	public static String strOp = null;
 	public static String heelo=null;
 	public static String hello again=null;
+	public static String milan = null;
 		
 	final static Logger logger=Logger.getLogger(Login.class);
 	
