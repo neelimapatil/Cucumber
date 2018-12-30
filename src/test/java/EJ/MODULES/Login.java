@@ -31,6 +31,7 @@ public class Login extends Config{
 	public static int intStepCounter=0;
 	public static String strOp = null;
 	public static String heelo=null;
+	public static String hello again=null;
 	
 	final static Logger logger=Logger.getLogger(Login.class);
 	
