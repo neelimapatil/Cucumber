@@ -31,7 +31,12 @@ public class Login extends Config{
 	public static int intStepCounter=0;
 	public static String strOp = null;
 	public static String heelo=null;
+<<<<<<< HEAD
 		
+=======
+	public static String hello again=null;
+	
+>>>>>>> branch 'master' of https://github.com/neelimapatil/Cucumber
 	final static Logger logger=Logger.getLogger(Login.class);
 	
 	@When("^user opens the \"(.*)\" browser$")
