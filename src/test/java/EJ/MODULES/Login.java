@@ -55,7 +55,6 @@ public class Login extends Config{
 				Config.CaptureScreenshot(strScreenShotFolderPath, "OpenBrowser");
 			}
 			HTMLReportGenerator.StepDetails("PASS", "OpenBrowser", "Open Browser Successful", strScreenShotFileName);
-			System.out.println("to test push branch");
 		}
 		catch(Exception e)
 		{
