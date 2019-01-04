@@ -23,6 +23,7 @@ import cucumber.api.java.Before;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import testDataTypes.Customer;
 
 public class Login extends Config{
 
@@ -364,7 +365,9 @@ public class Login extends Config{
 	public static void main(String[] args) throws Exception
 	{
 		Config.InitFlags();
-
+		JsonDataReader JsonData = new JsonDataReader();
+		JsonData.getCustomerData();
+		//System.out.println(customerList);
 		Login objLogin = new Login();
 		String strReadValue=objLogin.GetParameterValue_again("BROWSER_NAME", "parameter.properties");
 		Login.OpenBrowser(strReadValue);
