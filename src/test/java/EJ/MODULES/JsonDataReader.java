@@ -13,14 +13,15 @@ import org.json.simple.parser.ParseException;
 
 import com.google.gson.Gson;
 import managers.FileReaderManager;
-
+import testDataTypes.Company;
 import testDataTypes.Customer;
 
 
  
 public class JsonDataReader<JSONString> {
 
- 
+	 String customerFilePath = "src/test/resources/" + "Company.json";
+	 List<Customer> customerList;
 // public JsonDataReader(){
  //customerList = getCustomerData();
 // }
@@ -28,8 +29,7 @@ public class JsonDataReader<JSONString> {
  //private List<Customer> getCustomerData()
  public void getCustomerData() throws IOException, ParseException
  {
-	 String customerFilePath = "src/test/resources/" + "Customer.json";
-	 List<Customer> customerList;
+
  Gson gson = new Gson();
 //	 JSONString CompList = null;	 
  BufferedReader bufferReader = null;
@@ -44,6 +44,33 @@ public class JsonDataReader<JSONString> {
      
  System.out.println(customers);
  System.out.println(customers[1].firstName);
+ System.out.println(customers[1].address.city);
+//return Arrays.asList(customers);
+ }catch(FileNotFoundException e) {
+ throw new RuntimeException("Json file not found at path : " + customerFilePath);
+ }finally {
+ try { if(bufferReader != null) bufferReader.close();}
+ catch (IOException ignore) {}
+ }
+ }
+ public void getCompanyData() throws IOException, ParseException
+ {
+
+ Gson gson = new Gson();
+//	 JSONString CompList = null;	 
+ BufferedReader bufferReader = null;
+ try {
+ bufferReader = new BufferedReader(new FileReader(customerFilePath));
+ Company[] customers = gson.fromJson(bufferReader, Company[].class);
+	//// JSONParser jsonParser = new JSONParser();			
+//		Object obj = jsonParser.parse(new FileReader(customerFilePath));
+	//	JSONArray jsonObject = (JSONArray) obj;
+	//	JSONObject jasonobj =  (JSONObject) obj;
+    // CompList = (JSONString) jasonobj.toJSONString();
+     
+ System.out.println(customers);
+ System.out.println(customers[0].cOMPANYMOBILE);
+ System.out.println(customers[0].cOMPANYNAME);
 //return Arrays.asList(customers);
  }catch(FileNotFoundException e) {
  throw new RuntimeException("Json file not found at path : " + customerFilePath);

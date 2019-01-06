@@ -1,0 +1,33 @@
+[{
+"cOMPANYNAME" : "Neelima",
+"cOMPANYTYPE" : "IT",
+"cOMPANYSUBTYPE" : "Support",
+"cOMPANYADDRESS" : "sahakar nagar",
+"cOMPANYPHONE" : "7689065437",
+"cOMPANYEMAIL" : "patilbff@gmail.com",
+"cOMPANYPAN" : "JUIOO9876B",
+"cOMPANYTIN" : "SDDHJHKLIU",
+"cOMPANYMOBILE" : "4567890786",
+"cOMPANYWEBSITE" : "ertyhggk.com",
+"cOUNTRY" : "INDIA",
+"sTATE" : "MAHARASHTRA",
+"cITY" : "PUNE",
+"tOTALEMPLOYEE" : "6"
+},
+{
+"COMPANY_NAME" : "Milan",
+"COMPANY_TYPE" : "IT",
+"COMPANY_SUBTYPE" : "Support",
+"COMPANY_ADDRESS" : "Sun city",
+"COMPANY_PHONE" : "7689065437",
+"COMPANY_EMAIL" : "milan@gmail.com",
+"COMPANY_PAN" : "JUIOO9876B",
+"COMPANY_TIN" : "SDDHJHKLIU",
+"COMPANY_MOBILE" : "6789065435",
+"COMPANY_WEBSITE" : "ertyhggk.com",
+"COUNTRY" : "INDIA",
+"STATE" : "MAHARASHTRA",
+"CITY" : "PUNE",
+"TOTAL_EMPLOYEE" : "6"
+}
+]
